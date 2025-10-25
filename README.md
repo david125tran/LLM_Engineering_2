@@ -44,7 +44,8 @@
 
 #### **Why This Matters — The DeepSeek Revolution** ⚙️  
 DeepSeek’s new architecture (**released 10 months ago**) is fundamentally changing how LLMs approach reasoning.  
-Unlike traditional transformer models that only produce an answer token-by-token, **DeepSeek-R1** was trained with **reinforcement learning over reasoning steps** — the model *thinks out loud* internally before committing to an answer.  
+Unlike traditional transformer models that only produce an answer token-by-token, **DeepSeek-R1** was trained with **reinforcement learning over reasoning steps** — the model *thinks out loud* internally before committing to an answer.  DeepSeek made their architecture & self-attention layers different than conventional methods to allow for this functionality. 
+
 When distilled into smaller models like **Qwen-1.5B**, this process still leaves behind structured reasoning traces that you can observe directly in code output.  
 
 #### **Why It’s Different from Conventional Models** 🔍  
