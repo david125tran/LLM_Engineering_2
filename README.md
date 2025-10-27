@@ -51,3 +51,12 @@ When distilled into smaller models like **Qwen-1.5B**, this process still leaves
 #### **Why It’s Different from Conventional Models** 🔍  
 - Most open-source LLMs are *inference-only black boxes*—they produce a result without revealing how it was derived.  
 - DeepSeek’s line of models exposes **traceable reasoning paths**, making it possible to debug, study, and even fine-tune on *reasoning quality*, not just final accuracy.  
+
+---
+
+### **10: Retrieval-Augmented Generation (RAG) App w/LangChain** 📚
+- **Objective:** Build a complete **RAG** pipeline that allows users to query real-world data - in this case, Eleven Madison Park's website - and receive AI-generated answers with cited sources.  
+- A RAG pipeline built with the LangChain framework.  
+
+---
+
