@@ -62,7 +62,7 @@ Unlike traditional transformer models that only produce an answer token-by-token
 ---
 
 ### **11: Input & Output Validation with Pydantic** 🧩
-- **Objective:** Explore Pydantic’s validation system for enforcing structured data models in LLM applications.
+- **Objective:** Explore Pydantic’s validation system for enforcing structured data models in LLM applications.  `Pydantic` is a Python library that automatically checks and enforces data structure and types, ensuring the inputs and outputs of your code — or an LLM — always match the expected schema.
 - **Highlights:**
   - Built multiple Pydantic models (`User`, `Product`, `Scientist`) to validate data types and structure automatically before processing.
   - Integrated Pydantic models directly into OpenAI’s `beta.chat.completions.parse()` method to enforce schema-constrained outputs from GPT responses.
