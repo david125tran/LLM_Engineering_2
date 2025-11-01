@@ -80,8 +80,7 @@ Unlike traditional transformer models that only produce an answer token-by-token
  - Performed **zero-shot classification** to establish a baseline, then fine-tuned Gemma using **LoRA adapters** with 4-bit quantization via `BitsAndBytes`, achieving GPU-efficient training on Colab.
  - Evaluated performance using accuracy, classification reports, and confusion-matrix visualizations, comparing **zero-shot** and **fine-tuned** results.
  - **Results** 
-    - Baseline (zero-shot): ~0.66 accuracy
-    - Fine-tuned (3 epochs, LoRA r=16): ~0.38 accuracy
+![Results](https://github.com/david125tran/LLM_Engineering_2/blob/main/12/Result.png?raw=true)
     - The fine-tuned model collapsed to predicting mostly positive (sometimes negative) and almost never neutral, which drove accuracy down.
     - The **class imbalance** in the dataset (neutral-heavy) and the limited **training epochs** likely contributed to this behavior.  I purposely trained on only a few epochs to save on GPU usage.  
  - **Takeaway** 🔐
