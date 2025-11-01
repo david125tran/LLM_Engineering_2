@@ -72,7 +72,15 @@ Unlike traditional transformer models that only produce an answer token-by-token
   - Going on a tangent, although this project wasn't centered around LLM best practices around securities, input/output validation acts as a first line of defense for LLM security, preventing prompt injection attacks or malformed data from propagating downstream.  
   - I plan to revisit this library in a future project to showcase LLM security best practices, including techniques from the [![OWASP Top 10 for Large Language Model Applications](image_url)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
- 
+ ---
+ ### **12: Fine-Tuning** 💹
+ - **Objective:** Demonstrate supervised fine-tuning (SFT) and parameter-efficient training (LoRA) of `google/gemma-3-1b-it` open-source instruct model.  
+ - Loaded & explored the **“Sentiment Analysis for Financial News v2”** dataset from HuggingFace.
+ - Implemented custom prompt-formatting functions tailored to each model’s chat chat schema for supervised fine-tuning.
+ - Performed **zero-shot classification** to establish a baseline, then fine-tuned Gemma using **LoRA adapters** with 4-bit quantization via `BitsAndBytes`, achieving GPU-efficient training on Colab.
+ - Evaluated performance using accuracy, classification reports, and confusion-matrix visualizations, comparing **zero-shot** and **fine-tuned** results.
+ - **Takeaway** 🔐
+    - By combining **LoRA adapters** with **4-bit quantization**, the fine-tuning process drastically reduces GPU memory requirements and compute costs — enabling efficient, low-cost customization of large language models without needing expensive multi-GPU infrastructure.
 
 
 
