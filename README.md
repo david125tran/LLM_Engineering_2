@@ -88,7 +88,7 @@ Unlike traditional transformer models that only produce an answer token-by-token
 
 ---
 
-### **12: Multi-Agent Collaboration with AutoGen (Cross-Model Chat)** 🤖🤝
+### **13: Multi-Agent Collaboration with AutoGen (Cross-Model Chat)** 🤖🤝
  - **Objective:** Build and orchestrate a team of autonomous AI agents that talk with each other using the **Microsoft AutoGen framework** to demonstrate **(1)** cross-model interoperability, **(2)** conversation state persistence, and **(3)** autonomous reasoning exchange between distinct LLMs.
  - **Highlights:** 
     - Used `ConversableAgent`, `GroupChat`, and `GroupChatManager` from **AutoGen** to simulate structured, role-based conversations.
