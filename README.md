@@ -86,5 +86,25 @@ Unlike traditional transformer models that only produce an answer token-by-token
  - **Takeaway** 🔐
     - By combining **LoRA adapters** with **4-bit quantization**, the fine-tuning process drastically reduces GPU memory requirements and compute costs — enabling efficient, low-cost customization of large language models without needing expensive multi-GPU infrastructure.
 
+---
+
+### **12: Multi-Agent Collaboration with AutoGen (Cross-Model Chat)** 🤖🤝
+ - **Objective:** Build and orchestrate a team of autonomous AI agents that talk with each other using the **Microsoft AutoGen framework** to demonstrate **(1)** cross-model interoperability, **(2)** conversation state persistence, and **(3)** autonomous reasoning exchange between distinct LLMs.
+ - **Highlights:** 
+    - Used `ConversableAgent`, `GroupChat`, and `GroupChatManager` from **AutoGen** to simulate structured, role-based conversations.
+    - Implemented three distinct roles:
+        1) Chief Marketing Officer (CMO) → sets brand vision and target audience. 
+        2) Brand Marketer → generates detailed campaign ideas and KPIs.
+        3) Media Strategist → Suggests channel and budget strategies.
+    - Demonstrated two runtime configurations:
+        1) **Part 1**: Single-Model (OpenAI GPT-4o-mini) — All agents powered by the same OpenAI model.
+        2) **Part 2**: Multi-Model (Gemini 2.0 Flash + OpenAI) — Cross-provider collaboration between Google and OpenAI agents.
+    - **Part 3**: Human-in-the-Loop (HIL) interaction through a User Proxy Agent, allowing live human input and redirection during group chat.
+    - Each part's multi-agent chat history is automatically saved as a Markdown transcript (`1_conversation_history.md`, `2_conversation_history.md`, `3_conversation_history.md`).
+    - The attached **Part 3** chat (`3_conversation_history.md`) highlights how human feedback can pivot the AI conversation, while AutoGen maintains the contextual alignment and goal consistency across agents.  A very powerful tool.  This dialog starts as a futuristic shoe campaign concept and organically evolves - through human intervention as the human user forces the conversation to pivot into something totally different.  
+ - **Takeaway:** 
+    - This module showcases how AutoGen enables autonomous, multi-agent collaboration across multiple LLM providers within a single workflow. 
+
+
 
 
