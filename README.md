@@ -105,6 +105,32 @@ Unlike traditional transformer models that only produce an answer token-by-token
  - **Takeaway:** 
     - This module showcases how AutoGen enables autonomous, multi-agent collaboration across multiple LLM providers within a single workflow. 
 
+---
 
+# **14: LangGraph — Visualizing Workflows & Tool-Using Agents** 🔗🧭
+ - **Objective:** Demonstrate how the **LangGraph** framework can be used to design and visualize full agentic workflows — from simple, deterministic state graphs to dynamic, tool-using agents.  This module focuses on progressive complexity, showing how to:
+    - Pass structured state between nodes.
+    - Introduce conditional routing and control flow.
+    - Integrate external tools to enable reasoning-and-acting behavior.
+    - Visualize the underlying architecture for transparency and debugging.
+ - **Highlights:**
+    - This script (`14.py`) is broken into three parts that progressively get more complex.
+    - Each part demonstrates a new LangGraph concept — starting simple and ending with a fully agentic workflow that can search the web, perform math, get the current date, and even find flights via the Amadeus API.
+    - `langgraph_diagrams.md`: This is a visual companion of Mermaid diagrams for all workflows
+ - **Parts:**
+    -  **Part 1** - **Foundational Graph Thinking (Atomic Workflow Design)**: Tiny summarizer graph
+        * This part introduces core abstraction behind LangGraph - a StateGraph composed of nodes and edges.  
+        * Demonstrate LangGraph’s event-driven design pattern: each node is self-contained, composable, and operates on a shared state.
+        * Conceptually represents the “Hello World” of graph reasoning.
+    -  **Part 2** - **Sequential Orchestration (Chaining LLM Capabilities)**: Linear pipeline
+        * Building on Part 1, this stage extended the graph into a multi-step pipeline, showing how separate LLM-driven tasks can be linked together in a structured, stateful way.
+    -  **Part 3** - **Agentic Reasoning and Dynamic Routing (Tool-Augmented Intelligence)**: Tool-using agent with conditional looping
+        * This was the most advanced section: introducing **conditional edges**, **ToolNodes**, and an **LLM-as-controller** architecture.  
+        * Here, the model dynamically decides whether to invoke a tool or to terminate — forming a control loop between thinking (model inference) and acting (tool execution).
+        * This structure mirrors how agent frameworks like **LangChain agents**, **AutoGen**, and **OpenAI’s function calling loops** operate under the hood — but with explicit, transparent routing logic.
+        * Conceptually, this part transitions LangGraph from a simple workflow engine into an agentic runtime system capable of multi-step reasoning, action chaining, and state persistence.
+ - **Takeaways**
+    -  LangGraph makes it easy to **compose LLMs, tools, and logic flow** into modular pieces.  
+    -  Thinking in **states** and **edges** felt strange at first but made debugging and visualization much clearer.  
 
-
+---
