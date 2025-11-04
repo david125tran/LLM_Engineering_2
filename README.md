@@ -107,7 +107,7 @@ Unlike traditional transformer models that only produce an answer token-by-token
 
 ---
 
-# **14: LangGraph — Visualizing Workflows & Tool-Using Agents** 🔗🧭
+### **14: LangGraph — Visualizing Workflows & Tool-Using Agents** 🔗🧭
  - **Objective:** Demonstrate how the **LangGraph** framework can be used to design and visualize full agentic workflows — from simple, deterministic state graphs to dynamic, tool-using agents.  This module focuses on progressive complexity, showing how to:
     - Pass structured state between nodes.
     - Introduce conditional routing and control flow.
