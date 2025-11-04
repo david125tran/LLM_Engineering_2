@@ -122,13 +122,34 @@ Unlike traditional transformer models that only produce an answer token-by-token
         * This part introduces core abstraction behind LangGraph - a StateGraph composed of nodes and edges.  
         * Demonstrate LangGraph’s event-driven design pattern: each node is self-contained, composable, and operates on a shared state.
         * Conceptually represents the “Hello World” of graph reasoning.
+            ```mermaid
+            graph TD
+                A([START]) --> B[Node: summarize_step]
+                B --> C([END])
+            ```
     -  **Part 2** - **Sequential Orchestration (Chaining LLM Capabilities)**: Linear pipeline
         * Building on Part 1, this stage extended the graph into a multi-step pipeline, showing how separate LLM-driven tasks can be linked together in a structured, stateful way.
+            ```mermaid
+            graph TD
+                A([START]) --> B[Node: summarize_step]
+                B --> C[Node: translate_step]
+                C --> D[Node: sentiment_step]
+                D --> E([END])
+            ```
     -  **Part 3** - **Agentic Reasoning and Dynamic Routing (Tool-Augmented Intelligence)**: Tool-using agent with conditional looping
         * This was the most advanced section: introducing **conditional edges**, **ToolNodes**, and an **LLM-as-controller** architecture.  
         * Here, the model dynamically decides whether to invoke a tool or to terminate — forming a control loop between thinking (model inference) and acting (tool execution).
         * This structure mirrors how agent frameworks like **LangChain agents**, **AutoGen**, and **OpenAI’s function calling loops** operate under the hood — but with explicit, transparent routing logic.
         * Conceptually, this part transitions LangGraph from a simple workflow engine into an agentic runtime system capable of multi-step reasoning, action chaining, and state persistence.
+            ```mermaid
+            graph TD
+                A([START]) --> B[Node: agent]
+                B -->|should_continue=True| C[Node: tool]
+                C --> D[Node: agent]
+                B -->|should_continue=False| E([END])
+                D -->|should_continue=True| C
+                D -->|should_continue=False| E
+            ```
  - **Takeaways**
     -  LangGraph makes it easy to **compose LLMs, tools, and logic flow** into modular pieces.  
     -  Thinking in **states** and **edges** felt strange at first but made debugging and visualization much clearer.  
