@@ -114,9 +114,9 @@ Unlike traditional transformer models that only produce an answer token-by-token
     - Integrate external tools to enable reasoning-and-acting behavior.
     - Visualize the underlying architecture for transparency and debugging.
  - **Highlights:**
-    - This script (`14.py`) is broken into three parts that progressively get more complex.
+    - This script (**`14.py`**) is broken into three parts that progressively get more complex.
     - Each part demonstrates a new LangGraph concept — starting simple and ending with a fully agentic workflow that can search the web, perform math, get the current date, and even find flights via the Amadeus API.
-    - `langgraph_diagrams.md`: This is a visual companion of Mermaid diagrams for all workflows
+    - **`langgraph_diagrams.md`**: This is a visual companion of Mermaid diagrams for all workflows
  - **Parts:**
     -  **Part 1** - **Foundational Graph Thinking (Atomic Workflow Design)**: Tiny summarizer graph
         * This part introduces core abstraction behind LangGraph - a StateGraph composed of nodes and edges.  
