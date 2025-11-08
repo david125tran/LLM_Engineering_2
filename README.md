@@ -171,10 +171,10 @@ Unlike traditional transformer models that only produce an answer token-by-token
 - **Takeaways** 🎯
     -  Machine learning fundamentals still matter — LLMs don't replace foundation-level supervised modeling skills.  
     -  Ensemble models like **Random Forests** and **XGBoost** capture non-linear relationships far better than **Linear Regression** in structured data.  
-    -  **Feature engineering + proper data prep** is more important than the model choice itself.  
+    -  **Feature engineering + proper data prep** is more important than the model choice itself.
+  
 ---
 
----
 ### **16: Autonomous Multi-Agent Machine Learning Pipeline w/ CrewAI** 🤖📈  
 **Objective:** Build a fully autonomous, end-to-end machine-learning workflow using **CrewAI**, where LLM agents collaborate to plan, write Python code, execute it, and evaluate a Random Forest model — with minimal human intervention.
 **Highlights:** 
