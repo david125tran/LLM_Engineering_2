@@ -182,9 +182,9 @@ Unlike traditional transformer models that only produce an answer token-by-token
  
 | Agent | Responsibility |
 |-------|----------------|
-| Planner | Designs the ML roadmap (Exploratory Data Analysis → preprocessing → model → eval) |
-| Data Engineer Agent | Inspects data, cleans, transforms, and builds features |
-| ML Engineer Agent | Trains a Random Forest model, evaluates MAE/MSE/RMSE/R², prints feature importance |
+| Lead Data Scientist and Planner | Designs the ML roadmap (Exploratory Data Analysis → preprocessing → model → eval) |
+| Data Analysis and Preprocessing Expert | Inspects data, cleans, transforms, and builds features |
+| Machine Learning Modeler and Evaluator | Trains a Random Forest model, evaluates MAE/MSE/RMSE/R², prints feature importance |
 
   - A custom `NotebookCodeExecutor` tool lets agents **write and execute real Python code inside the runtime** — meaning they don’t just suggest code, they actually **run it**, share global variables, and produce artifacts like a true ML pipeline.
   - This experiment demonstrates how autonomous LLM agents can move beyond conversation and into **structured, role-based collaboration with real execution power**.
