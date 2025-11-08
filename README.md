@@ -155,3 +155,21 @@ Unlike traditional transformer models that only produce an answer token-by-token
     -  Thinking in **states** and **edges** felt strange at first but made debugging and visualization much clearer.  
 
 ---
+### **15: Classical Machine Learning & Feature Engineering Pipeline** 📊🤖
+- **Objective:** Build a **full classical ML workflow** — from raw dataset → cleaning → feature engineering → model training → evaluation.  This module replicates the exact industrial ML lifecycle seen in analytics-driven organizations bringing together the classic data-science toolchain: `Pandas`, `NumPy`, `Scikit-Learn`, `Seaborn`, `XGBoost`.
+- **Highlights:**
+    -  Machine Learning data pre-processing
+    -  Categorical encoding (One-Hot Encoding)
+    -  Train/test split with `scikit-learn`
+    -  Building & comparing **three ML models**:  
+        - Linear Regression
+        - Random Forest Regressor
+        - XGBoost Regressor
+    -  Model evaluation with MAE, MSE, RMSE, and R²
+    -  Visualizing prediction performance
+    -  Extracting & plotting **feature importance**
+- **Takeaways** 🎯
+    -  Machine learning fundamentals still matter — LLMs don't replace foundation-level supervised modeling skills.  
+    -  Ensemble models like **Random Forests** and **XGBoost** capture non-linear relationships far better than **Linear Regression** in structured data.  
+    -  **Feature engineering + proper data prep** is more important than the model choice itself.  
+---
