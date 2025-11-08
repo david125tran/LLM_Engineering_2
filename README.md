@@ -173,3 +173,40 @@ Unlike traditional transformer models that only produce an answer token-by-token
     -  Ensemble models like **Random Forests** and **XGBoost** capture non-linear relationships far better than **Linear Regression** in structured data.  
     -  **Feature engineering + proper data prep** is more important than the model choice itself.  
 ---
+
+---
+### **16: Autonomous Multi-Agent Machine Learning Pipeline w/ CrewAI** 🤖📈  
+**Objective:** Build a fully autonomous, end-to-end machine-learning workflow using **CrewAI**, where LLM agents collaborate to plan, write Python code, execute it, and evaluate a Random Forest model — with minimal human intervention.
+**Highlights:** 
+  - This module transforms LLMs into **autonomous ML engineer AI Agents** working together like a real analytics team:
+ 
+| Agent | Responsibility |
+|-------|----------------|
+| Planner | Designs the ML roadmap (Exploratory Data Analysis → preprocessing → model → eval) |
+| Data Engineer Agent | Inspects data, cleans, transforms, and builds features |
+| ML Engineer Agent | Trains a Random Forest model, evaluates MAE/MSE/RMSE/R², prints feature importance |
+
+  - A custom `NotebookCodeExecutor` tool lets agents **write and execute real Python code inside the runtime** — meaning they don’t just suggest code, they actually **run it**, share global variables, and produce artifacts like a true ML pipeline.
+  - This experiment demonstrates how autonomous LLM agents can move beyond conversation and into **structured, role-based collaboration with real execution power**.
+  - This is all orchestrated with **CrewAI**, an agent-orchestration framework designed for building **multi-agent systems** where each agent has:
+    - A **role** (e.g., planner, data-engineer, evaluator)
+    - A **goal & backstory**
+    - A specific **task**
+    - Optional **tools** to interact with the environment
+  - This module uses **CrewAI + OpenAI models** to perform:
+    - Planning  
+    - Data prep & feature engineering  
+    - Model training & evaluation  
+    - Final reporting  
+### ⚠️ Security Note
+  - This module allows AI agents to execute code directly — **for learning purposes only**.
+In real deployments, I’d apply concepts from **OWASP LLM security** practices:
+    - ✅ Sandboxed execution  
+    - ✅ Policy-based tool access  
+    - ✅ Prompt injection defenses  
+    - ✅ Strict code filtering  
+    - etc.
+### 📂 Files
+- `16.py` — CrewAI agent pipeline
+- `notebookExecutor.py` — code-execution tool
+- `Supplement_Sales_Weekly.csv` — dataset used for modeling
