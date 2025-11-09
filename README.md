@@ -210,3 +210,43 @@ In real deployments, I’d apply concepts from **OWASP LLM security** practices:
 - `16.py` — CrewAI agent pipeline
 - `notebookExecutor.py` — code-execution tool
 - `Supplement_Sales_Weekly.csv` — dataset used for modeling
+
+---
+
+### **17: Model Context Protocol (MCP) — AI Tutor w/ Tool-Streaming + Agent Integration** 🧠🔌
+**Objective:**  
+Build a full **Model Context Protocol (MCP)** setup featuring a **custom AI Tutor server** that exposes learning tools — and a **client-side AI agent** that automatically selects and calls those tools over MCP via the **OpenAI Agents SDK**.
+**Highlights:**  
+-**MCP Server** (`17 - Server.py`)  
+  - Functions as an AI tutor, exposing four *streaming tools*:
+    1. `explain_concept(question, level)` — adjustable depth learning  
+    2. `summarize_text(text, compression_ratio)` — controlled compression  
+    3. `generate_flashcards(topic, num_cards)` — returns JSON-line cards  
+    4. `quiz_me(topic, level, num_questions)` — MCQ quiz w/ answer key  
+
+  - Built with `gradio` as UI **and** turned into a proper MCP server  
+  - Streams output chunk-by-chunk for real-time feedback  
+
+-**MCP Client Agent** (`17 - Client.py`)  
+  - Built using the **OpenAI Agents SDK + MCPServerSse**
+  - Creates a “Smart Assistant” that:
+    - Reads the MCP manifest/schema  
+    - Decides which MCP tool to call based on user request  
+    - Calls tools 
+    - Returns results interactively  
+
+-**Interactive CLI loop**
+  - User chats  
+  - Agent chooses tool or answers directly  
+  - Responses are streamed in real-time  
+
+---
+
+**Highlights**
+- 🔗 **MCP integration** — Learn to expose & consume AI tools over HTTP  
+- 🚀 **Streaming execution** — Tool outputs stream token-by-token  
+- 🤝 **Hybrid agent design** — LLM + structured tool calling  
+- 🎓 **Educational AI system** — Teach, summarize, quiz, flashcards  
+
+---
+
