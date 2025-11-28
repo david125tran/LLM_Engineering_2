@@ -70,7 +70,6 @@ Unlike traditional transformer models that only produce an answer token-by-token
 - **Takeaway** 🔐
   - The most valuable insight from this module was recognizing how Pydantic provides strong type safety and schema enforcement for LLM pipelines.
   - Going on a tangent, although this project wasn't centered around LLM best practices around securities, input/output validation acts as a first line of defense for LLM security, preventing prompt injection attacks or malformed data from propagating downstream.  
-  - I plan to revisit this library in a future project to showcase LLM security best practices, including techniques from the [![OWASP Top 10 for Large Language Model Applications](image_url)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
  ---
  ### **12: Fine-Tuning** 💹
